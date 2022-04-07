@@ -156,6 +156,13 @@ textarea {
   background-color: #ffffff;
   border: 1px solid rgb(47, 120, 14);
 }
+.section-form p {
+  margin-left: 2rem;
+}
+.section-form p a {
+  text-decoration: none;
+  font-weight: 800;
+}
 
 @media only screen and (max-width: 600px) {
   body {
@@ -218,5 +225,8 @@ textarea {
   }
   .section-form form button {
     margin: 1rem;
+  }
+  .section-form p {
+    margin: 0;
   }
 }
