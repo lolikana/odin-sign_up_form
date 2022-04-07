@@ -1,0 +1,80 @@
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    section {
+        width: 100vw;
+
+    }
+    
+    .section-img {
+        height: 20vh;
+
+        &-logo {
+            width: 100vw;
+            flex-flow: row nowrap;
+
+            img {
+                max-width: 50px;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        &-footer {
+            font-size: .5rem;
+            margin: 0;
+        }
+    }
+
+    .section-form {
+        justify-content: flex-start;
+
+        &-title {            
+            margin: 20px;
+
+            h1{
+                font-size: .75rem;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            fieldset {
+
+                legend {
+                    padding-bottom: 5px;
+                    font-size: .75rem;
+                }
+            }
+            
+            input {
+                width: 80%;
+
+                +.error-password::after {
+                    position: relative;
+                }
+
+                +.pattern-password::after {
+                    position: relative;
+                }
+            }
+
+            label {
+                font-size: .5rem;
+                margin-top: 5px;
+            }
+
+            button {
+                margin: 1rem;
+            }
+        }
+    }
+}

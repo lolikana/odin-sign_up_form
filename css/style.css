@@ -1,0 +1,222 @@
+@font-face {
+  font-family: Norsebold;
+  src: url("../fonts/Norse-Bold.otf") format("opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  overflow: auto;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+button,
+input,
+select,
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.section-img {
+  background-image: url(../img/halie-west-25xggax4bSA-unsplash.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-img h1,
+.section-img p,
+.section-img a {
+  color: #f4f4f4;
+}
+.section-img-logo {
+  width: 40vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+}
+.section-img-logo img {
+  max-width: 100px;
+  margin: 10px 0;
+}
+.section-img-logo h1 {
+  font-family: Norsebold, sans-serif;
+  font-size: 5rem;
+}
+.section-img-footer {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 0.75rem;
+}
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-form-title {
+  margin: 3rem 2rem;
+}
+.section-form form fieldset {
+  padding-left: 30px;
+  padding-bottom: 30px;
+  border: none;
+  box-shadow: 4px 6px 9px 3px rgba(0, 0, 0, 0.1);
+}
+.section-form form fieldset legend {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.section-form form input {
+  width: 200px;
+  border-radius: 3px;
+  padding: 2px 2px;
+}
+.section-form form input:invalid {
+  box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.4);
+}
+.section-form form input:invalid:focus {
+  box-shadow: none;
+}
+.section-form form input + .error-password::after {
+  position: absolute;
+  content: "*Passwords do not match";
+  font-size: 0.7em;
+  color: red;
+  margin: 4px 0 0 0;
+}
+.section-form form input + .pattern-password::after {
+  position: absolute;
+  content: "*Password is too short";
+  font-size: 0.7em;
+  color: red;
+  margin: 4px 0 0 0;
+}
+.section-form form .valid {
+  box-shadow: 0 0 2px 2px rgba(47, 120, 14, 0.4);
+}
+.section-form form .invalid {
+  box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.4);
+}
+.section-form form label {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding-bottom: 2px;
+  margin-top: 20px;
+}
+.section-form form input,
+.section-form form label {
+  display: block;
+  margin-right: 50px;
+}
+.section-form form .input-class {
+  display: flex;
+  flex-flow: row wrap;
+}
+.section-form form button {
+  color: #ffffff;
+  margin: 2rem;
+  padding: 15px 50px;
+  border-radius: 10px;
+  background-color: rgb(47, 120, 14);
+  cursor: pointer;
+}
+.section-form form button:hover {
+  color: rgb(47, 120, 14);
+  background-color: #ffffff;
+  border: 1px solid rgb(47, 120, 14);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  section {
+    width: 100vw;
+  }
+
+  .section-img {
+    height: 20vh;
+  }
+  .section-img-logo {
+    width: 100vw;
+    flex-flow: row nowrap;
+  }
+  .section-img-logo img {
+    max-width: 50px;
+    margin: 0;
+  }
+  .section-img-logo h1 {
+    font-size: 3rem;
+  }
+  .section-img-footer {
+    font-size: 0.5rem;
+    margin: 0;
+  }
+
+  .section-form {
+    justify-content: flex-start;
+  }
+  .section-form-title {
+    margin: 20px;
+  }
+  .section-form-title h1 {
+    font-size: 0.75rem;
+  }
+  .section-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-form form fieldset legend {
+    padding-bottom: 5px;
+    font-size: 0.75rem;
+  }
+  .section-form form input {
+    width: 80%;
+  }
+  .section-form form input + .error-password::after {
+    position: relative;
+  }
+  .section-form form input + .pattern-password::after {
+    position: relative;
+  }
+  .section-form form label {
+    font-size: 0.5rem;
+    margin-top: 5px;
+  }
+  .section-form form button {
+    margin: 1rem;
+  }
+}

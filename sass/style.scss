@@ -1,0 +1,151 @@
+@import "fonts";
+@import "reset";
+@import "config";
+@import "utilities";
+
+.section-img {
+    background-image: url(../img/halie-west-25xggax4bSA-unsplash.jpeg);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    h1, 
+    p, 
+    a {
+        color: $font-light-color;
+    }
+
+    &-logo {
+        width: 40vw;
+        background-color: rgb(0,0,0,.4);
+
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+
+        margin: auto 0;
+
+        img {
+            max-width: 100px;
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-family: Norsebold, sans-serif;
+            font-size: 5rem;
+        }
+    }
+
+    &-footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: .75rem;
+    }
+}
+
+.section-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-title {
+        margin: 3rem 2rem;
+    }
+
+    form {
+
+        fieldset {
+            padding-left: 30px;
+            padding-bottom: 30px;
+            border: none;
+            box-shadow: 4px 6px 9px 3px rgb(0,0,0,.1);
+            
+            legend {
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+        }
+    
+        input {
+            width: 200px;
+            border-radius: 3px;
+            padding: 2px 2px;
+
+            &:invalid {
+                box-shadow: 0 0 2px 2px rgba(255, 0, 0, .4);
+            
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            +.error-password::after {
+                position: absolute;
+                content: "*Passwords do not match";
+                font-size: .70em;
+                color: red;
+                margin: 4px 0 0 0;
+            }
+
+            +.pattern-password::after {
+                position: absolute;
+                content: "*Password is too short";
+                font-size: .70em;
+                color: red;
+                margin: 4px 0 0 0;
+            }
+        }
+        
+        .valid {
+            box-shadow: 0 0 2px 2px rgba(47, 120, 14, .4);
+        }
+
+        .invalid {
+            box-shadow: 0 0 2px 2px rgba(255, 0, 0, .4);
+        }
+    
+    
+        label {
+            font-size: .65em;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            font-weight: 400;
+            padding-bottom: 2px;
+            margin-top: 20px;
+        }
+    
+        input, 
+        label {
+            display: block;
+            margin-right: 50px;
+        }
+    
+        .input-class {
+            display: flex;
+            flex-flow: row wrap;
+        }
+    
+        button {
+            color: #ffffff;
+            margin: 2rem;
+            padding: 15px 50px;
+            border-radius: 10px;
+            background-color: rgb(47, 120, 14);
+            cursor: pointer;
+    
+            &:hover {
+                color:rgb(47, 120, 14);
+                background-color: #ffffff;
+                border: 1px solid rgb(47, 120, 14);
+            }
+        }
+    }
+ }
+
+ @import "mobile";
+
