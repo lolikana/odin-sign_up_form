@@ -110,14 +110,14 @@ textarea {
   position: absolute;
   content: "*Passwords do not match";
   font-size: 0.7em;
-  color: red;
+  color: rgb(255, 0, 0);
   margin: 4px 0 0 0;
 }
 .section-form form input + .pattern-password::after {
   position: absolute;
   content: "*Password is too short";
   font-size: 0.7em;
-  color: red;
+  color: rgb(255, 0, 0);
   margin: 4px 0 0 0;
 }
 .section-form form .valid {
@@ -160,6 +160,7 @@ textarea {
   margin-left: 2rem;
 }
 .section-form p a {
+  color: rgb(47, 120, 14);
   text-decoration: none;
   font-weight: 800;
 }
