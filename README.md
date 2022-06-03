@@ -6,6 +6,8 @@
 
 #### Project : Sign-up Form
 
+<a href="https://odin-sign-up-form.vercel.app/" target="_blank">Live Preview</a> with Vercel.
+
 Sign-up form using new HTML and CSS skills. 
 Also I tried to use SASS for the first time. 
 
